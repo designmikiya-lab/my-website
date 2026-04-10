@@ -1,0 +1,291 @@
+@charset "UTF-8"; /* 文字化け防止の呪文 */
+
+body {
+    background-color: white;
+    color: #333;
+    font-family: "Helvetica Neue", Arial, "Hiragino Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
+    /* ↑ これで、どのパソコンでも文字がシュッと綺麗に見えます */
+}
+/* リセット（余白をゼロにする） */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* ヘッダー全体の設定 */
+.site-header {
+    display: flex;             /* 横に並べる魔法の言葉 */
+    justify-content: space-between; /* ロゴとメニューを左右に離す */
+    align-items: center;       /* 上下中央に揃える */
+    padding: 20px 50px;        /* 上下20px、左右50pxの余白 */
+    background-color: #fff;    /* 背景は白 */
+}
+
+/* メニューのリスト（ul）を横に並べる */
+.nav-menu ul {
+    display: flex;             /* リスト項目も横に並べる */
+    list-style: none;          /* ポッチ（・）を消す */
+}
+
+/* メニューの間隔をあける */
+.nav-menu li {
+    margin-left: 30px;
+}
+
+/* リンクのデザイン */
+.nav-menu a {
+    text-decoration: none;     /* 下線を消す */
+    color: #333;               /* 文字の色 */
+    font-weight: bold;
+    font-size: 14px;
+}
+
+/* メインビジュアルの設定 */
+.main-visual {
+    width: 100%;
+    height: 60vh; /* 画面の高さの60%分を確保 */
+    background-color: #f0f4f8; /* 画像がない時のための背景色（薄い青） */
+    /* 本来はここに画像を入れます */
+    background-image: url("https://unsplash.com");
+    background-size: cover;    /* 画像を隙間なく表示 */
+    background-position: center; /* 画像の中央を表示 */
+    display: flex;
+    align-items: center;       /* 中の文字を上下中央に */
+    justify-content: center;   /* 中の文字を左右中央に */
+    color: #fff;               /* 文字を白に */
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.5); /* 文字を見やすくする影 */
+}
+
+.main-content {
+    text-align: center;        /* 文字をセンター寄せ */
+}
+
+.main-content h1 {
+    font-size: 40px;           /* キャッチコピーを大きく */
+    margin-bottom: 20px;
+}
+
+/* セクション全体の余白 */
+.services {
+    padding: 80px 50px;
+    text-align: center;
+}
+
+/* タイトルの下を空ける */
+.section-title {
+    margin-bottom: 50px;
+    font-size: 28px;
+}
+/* 3つの箱を横に並べる */
+.service-container {
+    display: flex;
+    justify-content: space-between; /* 箱と箱の間を均等に */
+    gap: 20px; /* 箱同士の隙間を指定 */
+}
+
+/* 1つ1つの箱のデザイン */
+.service-item {
+    flex: 1; /* 3つの箱を同じ幅にする */
+    padding: 30px;
+    background-color: #f9f9f9;
+    border: 1px solid #ddd;
+    border-radius: 8px; /* 角を丸くする */
+}
+
+.service-item h3 {
+    margin-bottom: 15px;
+    color: #003366; /* 少し濃い青色 */
+}
+
+/* お知らせセクション全体 */
+.news {
+    padding: 80px 50px;
+    background-color: #fff;
+    max-width: 1000px; /* 横に広がりすぎないように制限 */
+    margin: 0 auto;    /* 左右中央に寄せる */
+}
+
+/* リスト全体の装飾 */
+.news-list {
+    list-style: none;
+    border-top: 1px solid #eee; /* 一番上に線を入れる */
+}
+
+/* 日付 */
+.date {
+    font-size: 14px;
+    color: #888;
+    width: 120px; /* 日付の幅を固定して揃える */
+}
+
+/* カテゴリタグ */
+.category {
+    font-size: 11px;
+    background: #333;
+    color: #fff;
+    padding: 2px 8px;
+    margin-right: 20px;
+    border-radius: 3px;
+}
+
+/* タイトル（リンク） */
+.news-title {
+    text-decoration: none;
+    color: #333;
+    flex: 1; /* 残りの幅をすべて使う */
+    text-align: left;
+}
+
+.news-title:hover {
+    text-decoration: underline; /* マウスを乗せたら下線を出す */
+}
+
+.site-footer {
+    background-color: #333; /* 濃いグレーで引き締める */
+    color: #fff;            /* 文字は白 */
+    padding: 60px 50px 30px; /* 上60px、左右50px、下30px */
+    text-align: center;
+}
+
+.footer-logo {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.footer-address {
+    font-size: 14px;
+    line-height: 1.8;
+    margin-bottom: 40px;
+    color: #ccc; /* 住所は少し薄い色に */
+}
+
+.copyright {
+    font-size: 12px;
+    border-top: 1px solid #555; /* 上に細い線を入れる */
+    padding-top: 20px;
+    color: #888;
+}
+
+/* style.css の一番下に追加 */
+.nav-menu a {
+    transition: color 0.3s; /* 0.3秒かけて色を変える設定 */
+}
+
+.nav-menu a:hover {
+    color: #007bff; /* マウスを乗せたときの色（青） */
+}
+
+/* サービス項目の最後に「詳しくはこちら」というボタン風リンクを作る */
+.service-item a {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background-color: #003366;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+    transition:background-color 0.3s;
+}
+
+.service-item a:hover {
+    background-color: #00509e; /* マウスを乗せると少し明るい青に */
+}
+
+
+/* --- ここからスマホ用の設定 --- */
+
+/* 画面の横幅が 768px 以下になったら発動 */
+@media (max-width: 768px) {
+
+    /* 1. ヘッダーを中央寄せ・縦並びにする */
+    .site-header {
+        flex-direction: column;
+        padding: 20px;
+    }
+
+    .nav-menu {
+        margin-top: 15px;
+    }
+
+    .nav-menu li {
+        margin: 5px 10px; /* メニューの間隔を調整 */
+    }
+
+     /* 2. メインビジュアルの文字をスマホサイズに */
+    .main-content h1 {
+        font-size: 24px;
+    }
+
+    /* 3. サービス紹介（3つの箱）を縦に並べる */
+    .service-container {
+        flex-direction: column; 
+    }
+
+    .service-item {
+        width: 100%;
+        margin-bottom: 20px;
+    }
+
+    /* 4. お知らせを縦並びに（日付とタイトルを分ける） */
+    .news-list li {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .date {
+        margin-bottom: 5px;
+    }
+
+        /* 5. 全体の左右余白を少し詰める */
+        .services, .news {
+            padding: 40px 20px;
+        }
+    }
+
+.main-visual {
+        /* もし images フォルダの中に画像があるなら、これで正解です */
+        background-image: url("./images/main-visual.jpg");
+        /* 背景画像として表示するための必須設定（これがないと出ないことがあります） */
+        background-size: cover;
+        background-position: center;
+        width: 100%;
+        height: 60vh; /* 高さを指定しないと、中身が空なら表示されません */
+        }
+    
+     /* style.css：画像のデザインと位置を一括設定 */
+.service-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    /* ↓ ここで調整！ 50%を基準に、顔が映るまで数字を変えてみてください */
+    object-position: center 33%; 
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+/* お問い合わせフォームの設定 */
+.contact-section {
+    padding: 80px 50px;
+    max-width: 600px; /* フォームが横に広がりすぎないように */
+    margin: 0 auto;
+}
+
+.form-group {
+    margin-bottom: 20px;
+    text-align: left;
+}
+
+/* 大吉の時に使う特別なクラス */
+.daikichi {
+    color: #ff0000 !important;
+    font-size: 40px !important;
+    font-weight: bold;
+    animation: bounce 0.5s infinite alternate; /* 跳ねる動き */
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}
